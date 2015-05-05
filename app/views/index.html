@@ -1,0 +1,34 @@
+{{#if projects}}
+	<section>
+		<div class="wrapper-fluid">
+			<h2 class="page-title">Newest projects</h2>
+			{{#projects }}
+			<div class="project" on-click="open-ext" data-target="file:///{{ url }}" style="background-color: {{ color }}">
+				<i class="fa fa-cog project-options"></i>
+				<div class="container">
+					<span class="project-language">
+						{{ language }}
+					</span>
+					<h2 class="project-name">
+						{{ name }}
+					</h2>
+					<h3 class="project-description">
+						{{ description }}
+					</h3>
+				</div>
+			</div>
+			{{/projects}}
+		</div>
+	</section>
+{{else}}
+	<!-- If there are no projects yet -->
+	<div id="upload">
+		<h2>Drag & drop to add your first project</h2>
+	</div>
+	<!-- Upload drag functionality -->
+	<script type="text/javascript">
+		var __base = require('__base');
+		require(__base + 'public/js/project.js');
+	</script>
+{{/if}}
+	

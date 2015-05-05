@@ -1,0 +1,20 @@
+/* projecs grid */
+@media screen and (max-width: 1720px) {
+	.wrapper-fluid{
+		width: 925px;
+	}
+	
+}
+
+@media screen and (max-width: 1365px) {
+	.wrapper-fluid{
+		margin-left: 40px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.wrapper-fluid{
+		width: 630px;
+  		margin: 0 auto !important;
+	}
+}

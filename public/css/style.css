@@ -1,0 +1,339 @@
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a{	
+	-webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+	
+	text-decoration: none;
+	color: inherit;
+}
+
+li{
+	list-style: none;
+}
+
+/* end of reset */
+
+body{
+	background: #f0f0f0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body,
+html{
+	width: 100%;
+	height: 100%;
+}
+
+/*
+   navigations
+*/
+#icons{
+	position: fixed;
+	float: left;
+	width: 80px;
+	height: 100%;
+	background-color: #333;
+}
+
+	.action-label{
+		padding: 10px;
+		color: rgb(204, 204, 204);
+		margin: 14px;
+		box-sizing: border-box;
+		cursor: pointer;
+		display: flex;
+		font-size: 27px;
+		height: 40px;
+	}
+	
+		.action-label:hover{
+			color: #FFF;
+		}
+
+#main-nav{
+	position: fixed;
+	margin-left: 80px;
+	float: left;
+	width: 250px;
+	height: 100%;
+	background-color: #252526;
+}
+	
+	/* user part */
+	#main-nav #user {
+		width: 138px;
+		margin: 15px auto;
+		color: #FFF;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	
+		#user img{
+			width: 138px;
+			height: 138px;
+			border-radius: 70px;
+			margin-bottom: 10px;
+		}
+		
+		#user > span{
+			display: block;
+		}
+		
+		#user .name{
+			font-weight: bold;
+		}
+		
+		#user .title{
+			color: #e3e3e3;
+			font-size: 13px;
+		}
+	
+	/* navigation */	
+	nav .main-item{
+		display: block;
+		width: 100%;
+		padding: 10px 0px;
+		background-color: #393838;
+		color: #FFF;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+	}
+	
+	nav li:hover .main-item, 
+	nav li.active .main-item {
+		display: block;
+		background-color: #e96666;
+	}
+		
+		nav li:hover .main-item .chevron, 
+		nav li.active .main-item .chevron {
+			-moz-transform:rotate(180deg);
+		    -webkit-transform:rotate(180deg);
+		    transform:rotate(180deg);
+			
+			left: 230px;
+			top: 7px;
+		}
+		
+		nav li:hover ul, 
+		nav li.active ul{
+			opacity: 1;
+    		height: 200px;
+		}
+		
+		.main-item span{
+			margin-left: 30px;
+		}
+		
+		.main-item .chevron{
+			left: 225px;
+		  	top: 1px;
+		}
+		
+		.sub-item{
+			display: block;
+			padding: 8px 15px;
+			margin: 5px 0px 5px 25px;
+			color: #FFF;
+			border-left: 2px solid #252526;
+			font-size: 13px;
+		}
+		
+		nav ul ul li:hover .sub-item, nav ul ul li.active .sub-item{
+			background-color: #393838;
+			border-left: 2px solid #e96666;
+		}
+		
+	nav li > ul{
+		opacity:0;
+	    height: 0;
+	    overflow: hidden;
+	
+	    -webkit-transition: all .3s ease .15s;
+	    -moz-transition: all .3s ease .15s;
+	    -o-transition: all .3s ease .15s;
+	    -ms-transition: all .3s ease .15s;
+	    transition: all .3s ease .15s;
+	}
+
+/* main content */
+#content {
+	width: 100%;
+	height: 100%;
+}
+
+	#content h2.page-title{
+		margin-left: 7px;
+		margin-bottom: 10px;
+		font-size: 30px;
+		line-height: 80px;
+		font-family: 'Segoe UI';
+		color: #484848;
+	}
+
+	.wrapper{
+		width: calc(100%-330px);
+		height: 100%;
+		position: relative;
+		margin-left: 330px;
+	}
+	
+	#upload{
+		width: 350px;
+		height: 220px;
+		position: fixed;
+		top: 25%;
+		left: 50%;
+		background: url(../images/icons/cloud-upload.png);
+		background-size: 300px 200px;
+		background-repeat: no-repeat;
+		vertical-align: bottom;
+	}
+	
+		#upload h2{
+			position: relative;
+			top: 100%;
+			color: #d6d6d6;
+			font-size: 20px;
+		}
+	
+	/* projects */
+	#content section{
+		float: left;
+		padding-top: 20px;
+		width: 100%;
+	}	
+		
+		/* the projects wrapper to keep it centered */
+		.wrapper-fluid {
+			width: 1232px;
+			margin: 0 auto;
+			height: 100%;
+		}
+	
+	/* individual project */
+	.project{
+		float: left;
+		width: 288px;
+		height: 288px;
+		margin: 10px;
+	}
+		
+		.project .container {
+			position: relative;
+			top: 30%;
+			padding: 0px 20px;
+		}
+		
+		.project-name{
+			margin: 10px 0px;
+			text-transform: capitalize;
+		}
+		
+		.project-name,
+		.project-description {
+			font-family: Segoe UI;
+			color: #FFF;
+			font-size: 28px;
+		}
+		
+		.project-description {
+			font-size: 14px;
+		}
+		
+		.project-language {
+			padding: 6px;
+			display: block;
+			width: 60px;
+			text-align: center;
+			background-color: #F4F4F4;
+			border-radius: 4px;
+			font-family: verdana;
+			text-transform: uppercase;
+			color: #696969;
+			font-weight: bold;
+			font-size: 9px;
+		}
+		
+		.project-options{
+			float: right;
+			padding: 10px 10px;
+			color: #FFF;
+		}
+	
+
+/*
+   icons
+*/
+.explore{
+  background-image: url(../images/icons/files-dark.svg);
+  background-position: 9px 50%;
+  background-repeat: no-repeat;
+}
+
+.search{
+	background-image: url(../images/icons/search-dark.svg);
+	background-position: 9px center;
+  	background-repeat: no-repeat;
+}
+
+.git {
+	background-image: url(../images/icons/git-dark.svg);
+	background-position: 9px center;
+  	background-repeat: no-repeat;
+}
+
+/*
+   other gui elements
+*/
+.chevron{
+	-moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+	
+	display: block;
+	width: 5px;
+	height: 5px;
+	float: left;
+	
+	position: relative;
+	height:10px;/*height should be double border*/
+}
+.chevron:before,
+.chevron:after{
+	position:absolute;
+	display:block;
+	content:"";
+	-moz-transform:rotate(180deg);
+		    -webkit-transform:rotate(180deg);
+		    transform:rotate(180deg);
+	border:5px solid transparent;/*adjust size*/
+}
+
+.chevron:after{
+	border-top-color:#fff;/*Match background colour*/
+}
