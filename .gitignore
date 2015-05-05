@@ -1,3 +1,5 @@
 # Nodejs modules
 node_modules
 
+# Visual Code typings
+typings
