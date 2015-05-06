@@ -298,7 +298,7 @@ html{
 			padding: 10px 0px;
 			z-index: 1;
 			position: absolute;
-			left: 81.5%;
+			left: 56.5%;
   			top: 14%;
 			width: 160px;
 			height: auto;
@@ -312,7 +312,7 @@ html{
 		.menu-options:before {
 			position: absolute;
 			top: -7px;
-			left: 30px;
+			left: 102px;
 			display: inline-block;
 			border-right: 7px solid transparent;
 			border-bottom: 7px solid #434a54;
@@ -324,7 +324,7 @@ html{
 		.menu-options:after {
 			position: absolute;
 			top: -6px;
-			left: 31px;
+			left: 103px;
 			display: inline-block;
 			border-right: 6px solid transparent;
 			border-bottom: 6px solid #434a54;
