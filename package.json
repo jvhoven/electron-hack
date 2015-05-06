@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "app.js",
   "dependencies": {
+    "lowdb": "^0.7.3",
     "page": "^1.6.3",
     "ractive": "^0.7.3",
     "rekuire": "^0.1.9",

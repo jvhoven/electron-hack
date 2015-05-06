@@ -23,22 +23,31 @@ var templates = {
 */
 var routes = {
   home: function(ctx) {
+    // Get template for home
     ctx.template = templates.home;
     
     // Fetch projects
-    var data = controller.getAll();
-    var projects = data || false;
+    var objs = controller.getAll();
+    var projects = objs || false;
     
-    // Render
-   render(ctx, { projects: projects, page: "home" });
+    // Render it!
+   render(ctx, { page: "Recent projects", projects: projects, base: __base });
   },
   about: function(ctx) {
+    
+    // Get template for about page
     ctx.template = templates.about;
-    render(ctx, { page: "about" });
+    
+    // Render it!
+    render(ctx, { page: "about", base: __base });
   },
   upload: function(ctx) {
+    
+    // Get template for upload page
     ctx.template = templates.upload;
-    render(ctx, { page: "upload" });
+    
+    // Render it!
+    render(ctx, { page: "upload", base: __base });
   }
 };
 
@@ -48,7 +57,7 @@ page('/about', routes.about);
 page('/upload', routes.upload);
 page('/todo', function(ctx) {
   ctx.template = templates.todo;
-  render(ctx, { page: "todo" });
+  render(ctx, { page: "todo", base: __base });
 });
 
 // initialize router
@@ -61,8 +70,6 @@ function render (ctx, data) {
     template: ctx.template,
     data: data
   });
-  
-  
   
   return ract;
 }

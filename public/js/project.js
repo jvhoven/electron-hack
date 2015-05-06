@@ -9,6 +9,10 @@ var dialog = remote.require('dialog');
 var project = require(__base + "app/model/project");
 var controller = require(__base + "app/controllers/projects");
 
+/*
+* The random background colors for the projects
+* they're pretty awesome
+*/
 var colors = [ 
   "#37BC9B", "#3BAFDA", "#5D9CEC", "#4A89DC", "#5D9CEC", "#48CFAD", 
   "#A0D468", "#8CC152", "#FFCE54", "#F6BB42", "#FC6E51", "#E9573F",
@@ -28,7 +32,6 @@ uploader.ondragleave = uploader.ondragend = function () {
 };
 
 uploader.ondrop = function (e) {
-
   e.preventDefault();
   var file = e.dataTransfer.files[0];
   var proj = project.init(file.path, colors[Math.floor((Math.random() * 19))]);

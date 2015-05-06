@@ -1,16 +1,19 @@
-var tiny = require('tiny');
+var low = require('lowdb');
 var __base = require('__base');
 
-exports.db;
+/*
+* Make connection with our LowDB, which is an awesome module
+* to make local databases.
+*
+* https://github.com/typicode/lowdb
+*/
 
 exports.connect = function() {
 	
-	var db = tiny(__base + 'app/data/projects.tiny', function(err, _db) {
-		if(err)
-			console.log(err);
-			
-		return _db;
-	});	
+	var db = low(__base + 'app/data/projects.json', {
+	  autosave: true, // automatically save database on change (default: true)
+	  async: true     // asyncrhonous write (default: true)
+	});
 	
 	return db;
 };
@@ -22,61 +25,34 @@ exports.add = function(name, color, url, language, options) {
 	// Connect to db
 	var db = exports.connect();
 	
-	db.set(name, {
+	db("projects").push({
 		name: name,
 		color: color,
 		description: description,
 		url: url,
 		language: language,
 		options: options
-	}, function(err) {
-		if(err)
-			throw err;
-			
-		// We succesfully added a new project
 	});
 };
 
 exports.remove = function(name) {
-	
 	var db = exports.connect();
-	
-	db.remove(name, function(err) {
-		if(err)
-			throw err;
-			
-		// We successfully deleted a project
-	});
+	// Todo implement
 };
 
 exports.get = function(name) {
 	
 	var db = exports.connect();
-	
-	db.get(name, function(err, data) {
-		if(err)
-			return null;
-		
-		return data;
+	var project = db("projects").find({
+		name: name
 	});
+	
+	return project;
 };
 
 exports.getAll = function() {
 	var db = this.connect();
-	var data = [];
-	
-	db.each(function(obj) {
-		data.push(obj);
-	});
+	var data = db.object.projects;
 	
 	return data;
-};
-
-exports.close = function () {
-	var db = this.connect();
-	
-	db.close(function(err) {
-		if(err)
-			console.log(err);
-	});
 };

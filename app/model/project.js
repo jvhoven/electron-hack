@@ -18,12 +18,13 @@ var project =  {
 		return this;
 	},
 	
-	// Save project to tiny db
+	// Save project to our database
 	save: function() {
+		console.log(this.name);
 		return controller.add(this.name, this.color, this.url, this.language, this.options);
 	},
 
-	// Remove project from tiny db
+	// Remove project from our database
 	remove: function() {
 		return controller.remove(this.name);
 	},
@@ -56,7 +57,8 @@ var project =  {
 	*/
 	setName: function() {
 		var bits = this.url.split("\\");
-		return bits[bits.length - 1].charAt(0).toUpperCase();
+		console.log(bits);
+		return bits[bits.length - 1].charAt(0).toUpperCase() + bits[bits.length - 1].slice(1);
 	}
 };
 
