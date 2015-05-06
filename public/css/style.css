@@ -116,16 +116,18 @@ html{
 		display: block;
 		width: 100%;
 		padding: 10px 0px;
-		background-color: #393838;
 		color: #FFF;
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 12px;
 	}
 	
-	nav li:hover .main-item, 
-	nav li.active .main-item {
+	nav li:hover .main-item {
 		display: block;
+		background-color: #393838;
+	}
+	
+	nav li.active .main-item {
 		background-color: #e96666;
 	}
 		

@@ -14,8 +14,7 @@ Ractive.DEBUG = false;
 var templates = {
   home: fs.readFileSync(__base + 'app/views/index.html').toString(),
   about: fs.readFileSync(__base + 'app/views/about.html').toString(),
-  upload: fs.readFileSync(__base + 'app/views/upload.html').toString(),
-  todo: fs.readFileSync(__base + 'app/views/todo.html').toString()
+  upload: fs.readFileSync(__base + 'app/views/upload.html').toString()
 };
 
 /*
@@ -55,10 +54,6 @@ var routes = {
 page('/', routes.home);
 page('/about', routes.about);
 page('/upload', routes.upload);
-page('/todo', function(ctx) {
-  ctx.template = templates.todo;
-  render(ctx, { page: "todo", base: __base });
-});
 
 // initialize router
 page.start();
