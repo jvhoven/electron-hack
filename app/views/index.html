@@ -5,6 +5,26 @@
 			{{#projects }}
 			<div class="project" on-click="open-ext" data-target="file:///{{ url }}" style="background-color: {{ color }}">
 				<i class="fa fa-cog project-options"></i>
+				<ul class="menu-options">
+					<li class="options-header">
+						Actions
+					</li>
+					<li>
+						<a href="#">Edit</a>
+					</li>
+					<li>
+						<a href="#">Delete</a>
+					</li>
+					<li class="options-header">
+						Utilities
+					</li>
+					<li>
+						<a href="#">Open in Code</a>
+					</li>
+					<li>
+						<a href="#">Open in Explorer</a>
+					</li>
+				</ul>
 				<div class="container">
 					<span class="project-language">
 						{{ language }}
@@ -26,6 +46,6 @@
 		<h2>Drag & drop to add your first project</h2>
 	</div>
 	<!-- Upload drag functionality -->
-	<script type="text/javascript" src="../../../public/js/project.js"></script>
+	<script type="text/javascript" src="{{ base }}public/js/project.js"></script>
 {{/if}}
 	
