@@ -8,5 +8,10 @@
     "page": "^1.6.3",
     "ractive": "^0.7.3"
   },
-  "postinstall": "mkdir -p ./node_modules/__base && echo \"module.exports = require('path').resolve(__dirname + '/../../') + '/';\" > ./node_modules/__base/index.js"
+  "scripts": {
+    "postinstall": "cd node_modules && mkdir __base && cd __base && echo module.exports = require('path').resolve(__dirname + '/../../') + '/'; > index.js"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.25.2"
+  }
 }

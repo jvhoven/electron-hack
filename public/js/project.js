@@ -1,6 +1,5 @@
 var fs = require("fs");
 var path = require("path");
-var tiny = require("tiny");
 var page = require("page");
 var __base = require("__base");
 var remote = require('remote');
