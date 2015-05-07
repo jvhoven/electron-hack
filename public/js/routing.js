@@ -9,6 +9,7 @@ var controller = require(__base + 'app/controllers/projects');
 Ractive.DEBUG = false;
 
 // Keep track of active page
+var CURR_PAGE;
 
 /*
 * All the templates inside our application
@@ -24,6 +25,10 @@ var templates = {
 */
 var routes = {
   home: function(ctx) {
+    
+    /*if(CURR_PAGE == "home")
+        return false;*/
+    
     // Get template for home
     ctx.template = templates.home;
     
@@ -32,23 +37,29 @@ var routes = {
     var projects = objs || false;
     
     // Render it!
-   render(ctx, { page: "Recent projects", projects: projects, base: __base });
+   render(ctx, { page: "home", title: "Recent projects", projects: projects, base: __base });
   },
   about: function(ctx) {
+    
+    /*if(CURR_PAGE == "about")
+        return false;*/
     
     // Get template for about page
     ctx.template = templates.about;
     
     // Render it!
-    render(ctx, { page: "about", base: __base });
+    render(ctx, { page: "about", title: "About", base: __base });
   },
   upload: function(ctx) {
+   
+    /*if(CURR_PAGE == "upload")
+        return false;*/
     
     // Get template for upload page
     ctx.template = templates.upload;
     
     // Render it!
-    render(ctx, { page: "upload", base: __base });
+    render(ctx, { page: "upload", title: "Upload a project", base: __base });
   }
 };
 
@@ -67,6 +78,12 @@ function render (ctx, data) {
     template: ctx.template,
     data: data
   });
+  
+  /*if(typeof(CURR_PAGE) == 'undefined') {
+    CURR_PAGE = "home";
+  } else {
+    CURR_PAGE = data.page;
+  }*/
   
   return ract;
 }

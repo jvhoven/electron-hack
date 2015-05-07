@@ -3,17 +3,17 @@
 		<div class="wrapper-fluid">
 			<h2 class="page-title">Newest projects</h2>
 			{{#projects }}
-			<div class="project" on-click="open-ext" data-target="file:///{{ url }}" style="background-color: {{ color }}">
+			<div class="project" style="background-color: {{ color }}">
 				<i class="fa fa-cog project-options"></i>
 				<ul class="menu-options">
 					<li class="options-header">
 						Actions
 					</li>
 					<li>
-						<a href="#">Edit</a>
+						<a href="#" data-action="edit" data-value="{{ name }}">Edit</a>
 					</li>
 					<li>
-						<a href="#">Delete</a>
+						<a href="#" data-action="delete" data-value="{{ name }}">Delete</a>
 					</li>
 					<li class="options-header">
 						Utilities
@@ -22,7 +22,7 @@
 						<a href="#">Open in Code</a>
 					</li>
 					<li>
-						<a href="#">Open in Explorer</a>
+						<a href="#" data-action="open-explorer" data-value="file:///{{ url }}">Open in Explorer</a>
 					</li>
 				</ul>
 				<div class="container">
