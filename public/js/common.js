@@ -3,7 +3,7 @@ var $ = require("jquery");
 $(document).ready(function(){
 	
 	// Open our fancy project option menu
-	$(".project-options").on("click", function() {
+	$(document).on("click", ".project-options", function() {
 		var $menu = $(this).next();
 		if($menu.hasClass("open") == false)
 			$menu.fadeToggle(100, function() {
@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});
 	
 	// But if we click on the element we want to keep it open
-	$(".menu-options").on("click", function(e) {
+	$(document).on("click", ".menu-options", function(e) {
 	    e.stopPropagation(); 
 	    return false;
 	});

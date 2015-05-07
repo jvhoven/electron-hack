@@ -8,6 +8,8 @@ var controller = require(__base + 'app/controllers/projects');
 // We use ractive for templating
 Ractive.DEBUG = false;
 
+// Keep track of active page
+
 /*
 * All the templates inside our application
 */
