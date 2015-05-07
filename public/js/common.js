@@ -51,5 +51,8 @@ $(document).ready(function(){
 	$(document).on("click", "a[data-action='open-explorer']", function() {
 		var file = $(this).attr("data-value");
 		shell.openExternal(file);
+		
+		// Close menu
+		$(".open").fadeToggle(100).removeClass("open");
 	});
 });

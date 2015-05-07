@@ -10,7 +10,6 @@ var controller = require(__base + "app/controllers/projects");
 var project =  {
 	init: function(url, color, name, language, options) {
 		this.url = url.replace(/\\/g, '/');
-		console.log(this.url);
 		this.color = color;
 		this.name = name || this.setName();
 		this.language = language || this.setLanguage();
@@ -58,7 +57,6 @@ var project =  {
 	*/
 	setName: function() {
 		var bits = this.url.split("/");
-		console.log(bits);
 		return bits[bits.length - 1].charAt(0).toUpperCase() + bits[bits.length - 1].slice(1);
 	}
 };

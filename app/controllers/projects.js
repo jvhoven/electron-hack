@@ -37,7 +37,7 @@ exports.add = function(name, color, url, language, options) {
 
 exports.remove = function(name) {
 	var db = exports.connect();
-	// Todo implement
+
 	db("projects").remove({
 		name: name
 	});
