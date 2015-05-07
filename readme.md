@@ -3,6 +3,8 @@
 Electron Hack will (hopefully) be a desktop project management app using Electron.
 Coming to a computer near you soon.
 
+![](https://github.com/jvhoven/electron-hack/blob/project-interaction/preview/hack.PNG)
+
 Modules
 * [lowDB](https://github.com/typicode/lowdb)
 * [pageJS](https://github.com/visionmedia/page.js)
