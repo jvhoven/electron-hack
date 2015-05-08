@@ -1,0 +1,7 @@
+.options-menu.ng-class{
+	-webkit-animation: 0.5s fade-out;
+  -moz-animation: 0.5s fade-out;
+  -o-animation: 0.5s fade-out;
+  animation: 0.5s fade-out;
+}
+

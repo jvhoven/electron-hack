@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="hack">
 	<head>
+		<base href="" />
 		<title>Hack - Project Management</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600,700' rel='stylesheet' type='text/css'>
-		<link href="../../../public/css/style.css" rel="stylesheet" />
-		<link href="../../../public/css/media.css" rel="stylesheet" />
-		<link href="../../../public/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="public/css/style.css" rel="stylesheet" />
+		<link href="public/css/media.css" rel="stylesheet" />
+		<link href="public/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="public/css/animations.css" rel="stylesheet" />
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="app/app.module.js"></script>
+		<script type="text/javascript" src="app/app.routes.js"></script>
+		<script type="text/javascript" src="app/components/home/homeController.js"></script>
+		<script type="text/javascript" src="app/shared/project/projectService.js"></script>
+		<script type="text/javascript" src="app/shared/project/projectModel.js"></script>
+		<script type="text/javascript" src="app/shared/upload/uploadController.js"></script>
 	</head>
 	<body>
 		<nav id="icons">
 			<ul>
 				<li>
-					<a class="action-label upload" href="/upload"><i class="fa fa-cloud-upload"></i></a>
+					<a class="action-label upload" href="#upload"><i class="fa fa-cloud-upload"></i></a>
 				</li>
 				<!--<li>
 					<a class="action-label search" href="#"></a>
@@ -23,19 +34,19 @@
 		</nav>
 		<section id="main-nav">
 			<div id="user">
-				<img src="../../../public/images/john-doe.png" />
+				<img src="public/images/john-doe.png" />
 				<span class="name">John Doe</span>
 				<span class="title">Senior programmer</span>
 			</div>
 			<nav>
 				<ul>
 					<li class="active">
-						<a class="main-item" href="/">
+						<a class="main-item" href="#">
 							<span>Home</span>
 						</a>
 					</li>
 					<li>
-						<a class="main-item" href="/about">
+						<a class="main-item" href="#about">
 							<span>About</span>
 						</a>
 					</li>
@@ -109,9 +120,9 @@
 			</nav>
 		</section>
 		<section id="content">
-			<div class="wrapper"></div>
+			<div class="wrapper">
+				<div ui-view></div>
+			</div>
 		</section>
-		<script type="text/javascript" src="../../../public/js/common.js"></script>
-		<script type="text/javascript" src="../../../public/js/routing.js"></script>
 	</body>
 </html>

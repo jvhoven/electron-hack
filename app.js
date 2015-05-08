@@ -1,11 +1,10 @@
-/// <reference path="typings/node/node.d.ts"/>
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 var path = require('path');
 
 // Constants
 var APP_NAME = "Hack";
-var INDEX = 'file://' + path.join(__dirname, '/app/views/_shared/layout.html');
+var INDEX = 'file://' + path.join(__dirname, 'index.html');
 var DEBUG = true;
 
 // Report crashes to our server.

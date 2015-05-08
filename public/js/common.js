@@ -1,11 +1,3 @@
-var $ = require("jquery");
-var __base = require("__base");
-var page = require("page");
-var projects = require(__base + "app/controllers/projects");
-var remote = require("remote");
-var shell = remote.require("shell");
-var dialog = remote.require('dialog');
-
 $(document).ready(function(){
 	
 	// Open our fancy project option menu
@@ -31,19 +23,21 @@ $(document).ready(function(){
 	// Deleting a project
 	$(document).on("click", "a[data-action='delete']", function() {
 		var name = $(this).attr("data-value");
-		
-		
-		var result = dialog.showMessageBox(remote.getCurrentWindow(), { type: "info", message: "Are you sure you want to remove " + name + "?", title: "Confirm", buttons: [ "Yes", "No" ]});
+		var result = dialog.showMessageBox(remote.getCurrentWindow(), { 
+			type: "info", message: "Are you sure you want to remove " + name + "?", 
+			title: "Confirm", 
+			buttons: [ "Yes", "No" ]
+		});
 		
 		// The user has chosen the option no
 		if(result == 1)
 			return false;
 		
-		projects.remove(name);
+		//projects.remove(name);
 		
 		// Settimeout because deleting project takes some time
 		setTimeout(function(){
-			page.redirect("/");
+			window.location.assign("/");
 		}, 200);
 	});
 	

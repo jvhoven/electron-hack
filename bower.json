@@ -1,0 +1,20 @@
+{
+  "name": "hack",
+  "version": "0.0.0",
+  "authors": [
+    "Jeffrey van Hoven <wolferine@live.se>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.14",
+    "angular": "~1.3.15",
+    "angular-animate": "~1.3.15"
+  }
+}

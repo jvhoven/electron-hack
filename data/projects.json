@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "name": "Yaml",
+      "color": "#3BAFDA",
+      "description": "Nothing is impossible, the word itself says 'I'm possible'!",
+      "url": "Z:\\Programming Projects\\nodejs\\electron\\yaml",
+      "language": "node_js",
+      "options": {}
+    },
+    {
+      "name": "Hack",
+      "color": "#48CFAD",
+      "description": "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+      "url": "Z:\\Programming Projects\\nodejs\\electron\\hack",
+      "language": null,
+      "options": {}
+    },
+    {
+      "name": "Hack",
+      "color": "#656D78",
+      "description": "Making a rune platebody requires 99 Smithing, 5 runite bars, and a hammer. To wear a rune platebody, players must have completed the Dragon slayer quest and have 40 Defence.",
+      "url": "Z:\\Programming Projects\\nodejs\\electron\\hack",
+      "language": null,
+      "options": {}
+    },
+    {
+      "name": "Electron-hack",
+      "color": "#8CC152",
+      "description": "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+      "url": "Z:\\Programming Projects\\nodejs\\electron\\electron-hack",
+      "language": "node_js",
+      "options": {}
+    },
+    {
+      "name": "Electron-hack",
+      "color": "#DA4453",
+      "description": "We know what we are, but know not what we may be.",
+      "url": "Z:\\Programming Projects\\nodejs\\electron\\electron-hack",
+      "language": "node_js",
+      "options": {}
+    },
+    {
+      "name": "Yaml",
+      "color": "#967ADC",
+      "description": "We know what we are, but know not what we may be.",
+      "url": "Z:\\Programming Projects\\nodejs\\electron\\yaml",
+      "language": "node_js",
+      "options": {}
+    }
+  ]
+}

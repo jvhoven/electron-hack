@@ -28,3 +28,6 @@ node_modules
 
 # Visual Code typings
 typings
+
+# Bower map
+bower_components

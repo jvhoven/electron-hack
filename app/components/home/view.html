@@ -1,0 +1,46 @@
+<section ng-if="projects">
+	<div class="wrapper-fluid">
+		<h2 class="page-title">Newest projects</h2>
+		<div ng-repeat="project in projects" class="project" style="background-color: {{ project.color }}">
+			<i class="fa fa-cog project-options" ng-class="menuOpened['{{ $index }}'] ? 'open' : ''" ng-click="toggleMenu($index)"></i>
+			<ul class="menu-options">
+				<li class="options-header">
+					Actions
+				</li>
+				<li>
+					<a href="#" ng-click="" data-value="{{ project.name }}">Edit</a>
+				</li>
+				<li>
+					<a href="#" ng-click="delete(project)">Delete</a>
+				</li>
+				<li class="options-header">
+					Utilities
+				</li>
+				<li>
+					<a href="#">Open in Code</a>
+				</li>
+				<li>
+					<a href="#" ng-click="openExplorer(project); toggleMenu($index)">Open in Explorer</a>
+				</li>
+			</ul>
+			<div class="container">
+				<span class="project-language">
+					{{ project.language }}
+				</span>
+				<h2 class="project-name">
+					{{ project.name }}
+				</h2>
+				<h3 class="project-description">
+					{{ project.description }}
+				</h3>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- If there are no projects yet -->
+<div id="upload" ng-if="!projects" ng-controller="uploadController">
+	<h2>Drag & drop to add your first project</h2>
+</div>
+<!-- Upload drag functionality -->
+
+	
