@@ -16,12 +16,11 @@ hackControllers.controller('homeController', ['$scope', 'ProjectService', 'Proje
             if(typeof($scope.menuOpened[index]) == 'undefined')
                 $scope.menuOpened[index] = false;
                 
-            $scope.menuOpened[index] = !$scope.menuOpened[index];
+            $scope.menuOpened[index] = !($scope.menuOpened[index]);
         };
         
         $scope.openExplorer = function(project) {
        		shell.openExternal(project.url);
         };
-        
     }
 ]);
