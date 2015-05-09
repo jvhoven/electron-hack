@@ -3,7 +3,7 @@
 Electron Hack will (hopefully) be a desktop project management app using Electron.
 Coming to a computer near you soon.
 
-![](https://github.com/jvhoven/electron-hack/blob/project-interaction/preview/hack.PNG)
+![](https://cloud.githubusercontent.com/assets/5366355/7550639/d7ec18b4-f669-11e4-9599-8514083a5d72.PNG)
 
 Modules
 * [AngularJS](https://github.com/angular/angular.js)
