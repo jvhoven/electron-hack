@@ -4,10 +4,16 @@ var remote = require("remote");
 var shell = remote.require("shell");
 var dialog = remote.require('dialog');
 
-hackControllers.controller('homeController', ['$scope', '$timeout', 'ProjectService', 'Project',
-    function ($scope, $timeout, ProjectService, Project) {
+hackControllers.controller('homeController', ['$scope', '$state', '$timeout', 'ProjectService', 'Project',
+    function ($scope, $state, $timeout, ProjectService, Project) {
         $scope.menuOpened = [];
         $scope.projects = ProjectService.getAll();
+        
+        $scope.reload = function () {
+            $timeout(function() {
+                $state.reload();
+            }, 40);
+        };
   
         $scope.delete = function (name) {
             var result = dialog.showMessageBox(remote.getCurrentWindow(), { type: "info", message: "Are you sure you want to remove " + name + "?", title: "Confirm", buttons: ["Yes", "No"] });
