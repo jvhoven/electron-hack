@@ -31,3 +31,6 @@ typings
 
 # Bower map
 bower_components
+
+#Database
+data
