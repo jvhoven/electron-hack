@@ -4,8 +4,8 @@ var remote = require("remote");
 var shell = remote.require("shell");
 var dialog = remote.require('dialog');
 
-hackControllers.controller('homeController', ['$scope', 'ProjectService', 'Project',
-    function ($scope, ProjectService, Project) {
+hackControllers.controller('homeController', ['$scope', '$timeout', 'ProjectService', 'Project',
+    function ($scope, $timeout, ProjectService, Project) {
         $scope.menuOpened = [];
         $scope.projects = ProjectService.getAll();
 
@@ -26,9 +26,9 @@ hackControllers.controller('homeController', ['$scope', 'ProjectService', 'Proje
             });
             
             //check if $apply() is already running
-            if(!$scope.$$phase) {
+            $timeout(function() {
                 $scope.$apply();
-            }
+            });
         }
 
         $scope.toggleMenu = function (index, event) {
