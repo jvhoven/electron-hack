@@ -1,11 +1,11 @@
 <ul>
-	<li class="active">
-		<a class="main-item" href="/">
+	<li ui-sref-active='active'>
+		<a ng-click="go('home')" class="main-item" ui-sref="home">
 			<span>Home</span>
 		</a>
 	</li>
-	<li>
-		<a class="main-item" href="#/about">
+	<li ui-sref-active='active'>
+		<a ng-click="go('about')" class="main-item" ui-sref="about">
 			<span>About</span>
 		</a>
 	</li>
