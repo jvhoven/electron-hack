@@ -2,25 +2,25 @@
 	<div class="wrapper-fluid">
 		<h2 class="page-title">Newest projects</h2>
 		<div ng-repeat="project in projects" class="project" style="background-color: {{ project.color }}">
-			<i class="fa fa-cog project-options" ng-class="menuOpened['{{ $index }}'] ? 'open' : ''" ng-click="toggleMenu($index)"></i>
+			<i class="fa fa-cog project-options" ng-class="menuOpened['{{ $index }}'] ? 'open' : ''" ng-click="toggleMenu($index, $event)"></i>
 			<ul class="menu-options" id="menu_{{$index}}" click-outside="console.log('WTF MAN');">
 				<li class="options-header">
 					Actions
 				</li>
 				<li>
-					<a href="#" ng-click="toggleMenu($index)" data-value="{{ project.name }}">Edit</a>
+					<a href="#" ng-click="toggleMenu($index, $event)" data-value="{{ project.name }}">Edit</a>
 				</li>
 				<li>
-					<a href="#" ng-click="delete(project.name); toggleMenu($index)">Delete</a>
+					<a href="#" ng-click="delete(project.name); toggleMenu($index, $event)">Delete</a>
 				</li>
 				<li class="options-header">
 					Utilities
 				</li>
 				<li>
-					<a href="#" ng-click="toggleMenu($index)">Open in Code</a>
+					<a href="#" ng-click="toggleMenu($index, $event)">Open in Code</a>
 				</li>
 				<li>
-					<a href="#" ng-click="toggleMenu($index); openExplorer(project);">Open in Explorer</a>
+					<a href="#" ng-click="toggleMenu($index, $event); openExplorer(project);">Open in Explorer</a>
 				</li>
 			</ul>
 			<div class="container">

@@ -19,23 +19,35 @@ hackControllers.controller('homeController', ['$scope', 'ProjectService', 'Proje
             ProjectService.delete(name);
         };
 
-        $scope.toggleMenu = function (index) {
+        $scope.closeAllMenus = function () {
+            $scope.menuOpened.forEach(function (element, index) {
+                if (element)
+                    $scope.menuOpened[index] = false;
+            });
+            
+            //check if $apply() is already running
+            if(!$scope.$$phase) {
+                $scope.$apply();
+            }
+        }
+
+        $scope.toggleMenu = function (index, event) {
             if (typeof ($scope.menuOpened[index]) == 'undefined')
                 $scope.menuOpened[index] = false;
+                
+            if(!($scope.menuOpened[index]))
+                $scope.closeAllMenus();
 
             $scope.menuOpened[index] = !($scope.menuOpened[index]);
+            event.stopPropagation();
         };
 
         $scope.openExplorer = function (project) {
             shell.openExternal(project.url);
         };
-        
-        window.onclick = function(event) {
-            console.log("Clicked anywhere.");
-            $scope.menuOpened.forEach(function(element, index) {
-                $scope.menuOpened[index] = false;
-                $scope.$apply();
-            });
-        }
+
+        window.onclick = function (event) {
+            $scope.closeAllMenus();
+        };
     }
 ]);
