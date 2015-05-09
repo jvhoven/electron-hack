@@ -9,19 +9,29 @@
       "options": {}
     },
     {
-      "name": "Electron-hack",
-      "color": "#48CFAD",
-      "description": "We know what we are, but know not what we may be.",
-      "url": "D:\\Stacks\\electron-hack",
-      "language": null,
-      "options": {}
-    },
-    {
       "name": "LoLStats",
       "color": "#FC6E51",
       "description": "Making a rune platebody requires 99 Smithing, 5 runite bars, and a hammer. To wear a rune platebody, players must have completed the Dragon slayer quest and have 40 Defence.",
       "url": "D:\\Stacks\\LoLStats",
       "language": null,
+      "options": {}
+    },
+    {
+      "name": "Test",
+      "color": "#5D9CEC",
+      "description": "Nothing is impossible, the word itself says 'I'm possible'!",
+      "url": "C:\\Users\\Jeffrey\\Desktop\\hack-linguist\\test",
+      "options": {}
+    },
+    {
+      "name": "Test",
+      "color": "#FC6E51",
+      "description": "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+      "url": "C:\\Users\\Jeffrey\\Desktop\\hack-linguist\\test",
+      "languages": [
+        "Ruby",
+        "JavaScript"
+      ],
       "options": {}
     }
   ]

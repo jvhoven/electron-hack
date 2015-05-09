@@ -252,7 +252,7 @@ html{
 		
 		.project .container {
 			position: relative;
-			top: 30%;
+			top: 20%;
 			padding: 0px 20px;
 		}
 		
@@ -272,20 +272,27 @@ html{
 			font-size: 14px;
 		}
 		
-		.project-language {
-			padding: 6px;
+		.project-languages {
+			width: 100%;
+			float: left;
 			display: block;
-			width: 60px;
-			text-align: center;
-			background-color: #F4F4F4;
-			border-radius: 4px;
-			font-family: verdana;
-			text-transform: uppercase;
-			color: #696969;
-			font-weight: bold;
-			font-size: 9px;
 		}
 		
+			.project-language {
+				float: left;
+				margin: 0px 5px 5px 0px;
+				padding: 6px;
+				min-width: 60px;
+				text-align: center;
+				background-color: #F4F4F4;
+				border-radius: 4px;
+				font-family: verdana;
+				text-transform: uppercase;
+				color: #696969;
+				font-weight: bold;
+				font-size: 9px;
+			}
+			
 		.project-options{
 			float: right;
 			padding: 10px 10px;

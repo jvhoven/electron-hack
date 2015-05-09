@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "app.js",
   "dependencies": {
+    "hack-linguist": "^1.0.0",
     "lowdb": "^0.7.3"
   },
   "scripts": {

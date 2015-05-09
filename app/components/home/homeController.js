@@ -8,7 +8,7 @@ hackControllers.controller('homeController', ['$scope', '$timeout', 'ProjectServ
     function ($scope, $timeout, ProjectService, Project) {
         $scope.menuOpened = [];
         $scope.projects = ProjectService.getAll();
-
+  
         $scope.delete = function (name) {
             var result = dialog.showMessageBox(remote.getCurrentWindow(), { type: "info", message: "Are you sure you want to remove " + name + "?", title: "Confirm", buttons: ["Yes", "No"] });
     		

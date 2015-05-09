@@ -24,9 +24,11 @@
 				</li>
 			</ul>
 			<div class="container">
-				<span class="project-language">
-					{{ project.language }}
-				</span>
+				<div class="project-languages">
+					<span ng-repeat="language in project.languages" class="project-language">
+						{{ language }}
+					</span>
+				</div>
 				<h2 class="project-name">
 					{{ project.name }}
 				</h2>

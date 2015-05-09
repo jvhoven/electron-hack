@@ -53,7 +53,7 @@ hackServices.factory('ProjectService', function () {
 			color: project.color,
 			description: project.description,
 			url: project.url,
-			language: project.language,
+			languages: project.languages,
 			options: project.options
 		});
 	};

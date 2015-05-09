@@ -1,5 +1,6 @@
 var fs = require("fs");
 var path = require("path");
+var linguist = require('hack-linguist');
 
 var hackModels = angular.module('hackModels', []);
 
@@ -12,7 +13,7 @@ hackModels.factory('Project', function(){
 			url: data.url,
 			color: this.setColor(),
 			name: data.name || this.setName(data.url),
-			language: data.language || this.setLanguage(data.url),
+			languages: data.language || this.setLanguages(data.url),
 			description: data.description || this.randomDescription(),
 			options: data.options || {},	
 		});
@@ -48,24 +49,8 @@ hackModels.factory('Project', function(){
 	*  For now we'll use this shallow approach, but we might implement
 	*  Linguist in the future.
 	*/
-	Project.prototype.setLanguage = function(url) {
-		
-		try {
-			var data = fs.readFileSync(path.join(url, '/.travis.yml')).toString();
-
-		    if(data.length > 0) {	  
-				// Really ugly way to get the file
-				// TODO: use regular expression
-				var lines = data.split("\n");
-				var objects = lines[0].split(":");
-				var language = objects[1].replace(/\s+/g, '');
-	
-				// Set the language
-		      	return language;
-			}	  
-		} catch(Exception) {
-			return null;
-		}
+	Project.prototype.setLanguages = function(url) {
+		return linguist.detect(url);
 	};
 	
 	/*
