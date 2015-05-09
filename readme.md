@@ -6,9 +6,10 @@ Coming to a computer near you soon.
 ![](https://github.com/jvhoven/electron-hack/blob/project-interaction/preview/hack.PNG)
 
 Modules
+* [AngularJS](https://github.com/angular/angular.js)
+* [AngularUI-router](https://github.com/angular-ui/ui-router)
 * [lowDB](https://github.com/typicode/lowdb)
-* [pageJS](https://github.com/visionmedia/page.js)
-* [ractiveJS](https://github.com/ractivejs/ractive)
+* [electron](https://github.com/atom/electron)
 
 # References
 
