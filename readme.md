@@ -8,7 +8,6 @@ Coming to a computer near you soon.
 Modules
 * [AngularJS](https://github.com/angular/angular.js)
 * [AngularUI-router](https://github.com/angular-ui/ui-router)
-* [lowDB](https://github.com/typicode/lowdb)
 * [electron](https://github.com/atom/electron)
 
 # References
