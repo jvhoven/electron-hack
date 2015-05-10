@@ -9,6 +9,7 @@
 		<link href="public/css/media.css" rel="stylesheet" />
 		<link href="public/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="public/css/animations.css" rel="stylesheet" />
+		<link href="public/css/hack-ui.css" rel="stylesheet" />
 		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -43,80 +44,35 @@
 				<ul>
 					<li ui-sref-active='active'>
 						<a class="main-item" ui-sref="home">
+							<i class="fa fa-home"></i>
 							<span>Home</span>
 						</a>
 					</li>
 					<li ui-sref-active='active'>
 						<a class="main-item" ui-sref="about">
+							<i class="fa fa-quote-right"></i>
 							<span>About</span>
 						</a>
 					</li>
-					<!--<li class="active">
-						<a class="main-item" href="#">
-							<span>languages</span>
+					<li ui-sref-active='active'>
+						<a class="main-item" ui-sref="project">
+							<i class="fa fa-list"></i>
+							<span>Projects</span>
 							<i class="chevron"></i>
 						</a>
 						<ul>
-							<li>
-								<a class="sub-item" href="/about">
-									<span>Python</span>
+							<li ui-sref-active='active'>
+								<a class="sub-item" ui-sref="project">
+									<span>Add a project</span>
 								</a>
 							</li>
 							<li>
-								<a class="sub-item" href="#">
-									<span>Ruby</span>
-								</a>
-							</li>
-							<li>
-								<a class="sub-item" href="#">
-									<span>Java</span>
-								</a>
-							</li>
-							<li class="active">
-								<a class="sub-item" href="#">
-									<span>JavaScript</span>
-								</a>
-							</li>
-							<li>
-								<a class="sub-item" href="#">
-									<span>C++</span>
+								<a class="sub-item" ui-sref="project">
+									<span>Edit a project</span>
 								</a>
 							</li>
 						</ul>
 					</li>
-					<li>
-						<a class="main-item" href="#">
-							<span>options</span>
-							<i class="chevron"></i>
-						</a>
-						<ul>
-							<li>
-								<a class="sub-item" href="">
-									<span>My account</span>
-								</a>
-							</li>
-							<li>
-								<a class="sub-item" href="#">
-									<span>Github options</span>
-								</a>
-							</li>
-							<li>
-								<a class="sub-item" href="#">
-									<span>Project options</span>
-								</a>
-							</li>
-							<li>
-								<a class="sub-item" href="#">
-									<span>Viewing options</span>
-								</a>
-							</li>
-							<li>
-								<a class="sub-item" href="#">
-									<span>Some options</span>
-								</a>
-							</li>
-						</ul>
-					</li>-->
 				</ul>
 			</nav>
 		</section>

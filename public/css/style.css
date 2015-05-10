@@ -119,7 +119,7 @@ html{
 	nav .main-item{
 		display: block;
 		width: 100%;
-		padding: 10px 0px;
+		padding: 13px 0px;
 		color: #FFF;
 		text-transform: uppercase;
 		font-weight: 600;
@@ -152,7 +152,12 @@ html{
 		}
 		
 		.main-item span{
-			margin-left: 30px;
+			margin-left: 40px;
+		}
+		
+		.main-item i{
+			position: relative;
+			left: 20px;
 		}
 		
 		.main-item .chevron{
@@ -162,7 +167,7 @@ html{
 		
 		.sub-item{
 			display: block;
-			padding: 8px 15px;
+			padding: 10px 15px;
 			margin: 5px 0px 5px 25px;
 			color: #FFF;
 			border-left: 2px solid #252526;
@@ -192,14 +197,38 @@ html{
 	height: 100%;
 }
 
-	#content h2.page-title{
-		margin-left: 7px;
-		margin-bottom: 10px;
-		font-size: 30px;
-		line-height: 80px;
-		font-family: 'Segoe UI';
-		color: #484848;
+	#content .page-title{
+		float: left;
+		width: 100%;
+		background-color: #FFF;
+		padding: 30px 0px;
+		height: 65px;
+		margin-bottom: 40px;
 	}
+		
+		#content .page-title i{
+			display: block;
+			float: left;
+			margin: 13px 30px 0px 10px;
+			width: 41px;
+			height: 100%;
+		  	font-size: 40px;
+		  	color: #898989;
+		}
+		
+		#content .page-title h2{
+			display: inline-block;
+			font-size: 30px;
+			font-family: 'Segoe UI';
+			color: #484848;
+		}
+		
+		#content .page-title span{
+			display: block;
+			font-family: 'Open Sans';
+			font-size: 14px;
+			color: #e3e3e3;
+		}
 
 	.wrapper{
 		width: calc(100%-330px);
@@ -230,7 +259,6 @@ html{
 	/* projects */
 	#content section{
 		float: left;
-		padding-top: 20px;
 		width: 100%;
 	}	
 		
@@ -396,7 +424,6 @@ html{
     transition: all 0.2s linear;
 	
 	display: block;
-	width: 5px;
 	height: 5px;
 	float: left;
 	

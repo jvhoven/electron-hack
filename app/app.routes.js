@@ -31,18 +31,22 @@ hack.config(['$stateProvider', '$urlRouterProvider',
 			 * 	1. Grid (current)
 			 *  2. List (Would display: name, (github: number of stars and forks), short description, small icon)
 			 */
-			.state('home', {
+		.state('home', {
 			url: '/',
 			templateUrl: 'app/components/home/view.html',
 			controller: 'homeController'
 		})
-			.state('about', {
+		.state('about', {
 			url: '/about',
 			templateUrl: 'app/components/about/view.html'
 		})
-			.state('upload', {
+		.state('upload', {
 			url: '/upload',
 			templateUrl: 'app/shared/upload/view.html',
 			controller: 'uploadController'
+		})
+		.state('project', {
+			url: '/project',
+			templateUrl: 'app/components/project/view.html'
 		});
 	}]);

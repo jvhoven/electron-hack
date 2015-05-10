@@ -1,0 +1,85 @@
+/* panel */
+.panel{ 
+	float: left;
+	width: 600px;
+	min-height: 400px;
+	background-color: #FFF;
+}
+
+	.panel .header{
+		width: 100%;
+		background-color: #3bafda;
+		padding: 10px 0px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		color: #FFF;
+	}
+		
+		.panel .header i {
+			margin: 0px 20px;
+		}
+		
+		.panel .header h2{
+			display: inline-block;
+		}
+		
+	.panel .content {
+		margin: 40px 60px;
+	}
+	
+		.panel .content .form-control {
+			margin: 30px 0px;
+		}
+	
+			.panel .content .form-control label{
+				display: block;
+				font-family: 'Open Sans';
+				font-size: 12px;
+				font-weight: bold;
+				color: #8B8B8B;
+				margin: 15px 0px;
+			}
+			
+			.panel .content .form-control input, .panel .content .form-control textarea {
+				width: 100%;
+				padding: 10px;
+				background-color: #FCFCFC;
+				border: 1px solid #e7e6e6;
+				border-radius: 4px;
+				color: #b0b0b0;
+			}
+
+	.panel .buttons{
+		border-top: 2px solid #f3f3f3;
+		width: 100%;
+		min-height: 50px;
+		padding: 20px 0px;
+		background-color: #f7f7f7;
+		text-align: right;
+	}
+	
+		.panel .btn{
+			margin: 5px 30px 0px 0px;
+		}
+	
+/* buttons */
+.btn{
+	border: 0;
+	min-width: 60px;
+	padding: 10px 30px;
+	background-color: #f0f0f0;
+	font-family: 'Open sans';
+	color: #e3e3e3;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-radius: 4px;
+}
+
+.btn-primary{
+	background-color: #a0d468;
+	color: #FFF;
+}
+
+.btn:hover{
+	cursor:pointer;
+}
