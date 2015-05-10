@@ -1,7 +1,9 @@
-.options-menu.ng-class{
-	-webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
-  animation: 0.5s fade-out;
+.menu-options{
+	opacity: 0;
+	transition:visibility 0s linear 0.1s,opacity 0.1s linear;
 }
 
+.project-options.open + .menu-options {
+	opacity:1;
+	transition-delay:0s;
+}
