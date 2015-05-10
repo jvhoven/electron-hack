@@ -46,9 +46,8 @@
 	</div>
 </section>
 <!-- If there are no projects yet -->
-<div id="upload" ng-if="!projects" ng-controller="uploadController">
-	<h2>Drag & drop to add your first project</h2>
+<div ng-if="!projects" ng-init="go('upload');">
 </div>
-<!-- Upload drag functionality -->
+<!-- Redirect to upload page -->
 
 	

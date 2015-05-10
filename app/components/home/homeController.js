@@ -14,6 +14,9 @@ hackControllers.controller('homeController', ['$scope', '$state', '$timeout', 'P
                 $state.reload();
             }, 40);
         };
+        $scope.go = function (state) {
+            $state.go(state);
+        };
   
         $scope.delete = function (name) {
             var result = dialog.showMessageBox(remote.getCurrentWindow(), { type: "info", message: "Are you sure you want to remove " + name + "?", title: "Confirm", buttons: ["Yes", "No"] });
@@ -53,7 +56,8 @@ hackControllers.controller('homeController', ['$scope', '$state', '$timeout', 'P
         };
 
         window.onclick = function (event) {
-            $scope.closeAllMenus();
+            if(event.target.className != "menu-options" && event.target.className != "options-header")
+                $scope.closeAllMenus();
         };
     }
 ]);
