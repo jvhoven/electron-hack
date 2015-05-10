@@ -13,12 +13,6 @@ fs.lstat('data', function(err, stats) {
     if(err)
       // Create dir
       fs.mkdir('data');
-      
-      // Create projects db
-      fs.writeFile('projects.json', '{\n}', function (err) {
-        if (err) throw err;
-          console.log('It\'s saved!');
-      });
 });
 
 // Report crashes to our server.
