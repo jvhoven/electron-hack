@@ -1,11 +1,25 @@
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 var path = require('path');
+var fs = require('fs');
 
 // Constants
 var APP_NAME = "Hack";
 var INDEX = 'file://' + path.join(__dirname, 'index.html');
 var DEBUG = true;
+
+// Create data directory and files
+fs.lstat('data', function(err, stats) {
+    if(err)
+      // Create dir
+      fs.mkdir('data');
+      
+      // Create projects db
+      fs.writeFile('projects.json', '{\n}', function (err) {
+        if (err) throw err;
+          console.log('It\'s saved!');
+      });
+});
 
 // Report crashes to our server.
 require('crash-reporter').start();
