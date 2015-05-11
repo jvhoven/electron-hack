@@ -45,13 +45,21 @@ hackServices.factory('ProjectService', function () {
 
 	this.update = function (name, project) {
 		// TODO
-		this.db('projects')
-		  .chain()
-		  .find({ name: "Hack" })
-		  .assign({ title: 'test'})
-		  .value();
-				
-		alert("Updated!");
+		var db = this.db();
+		
+		db('projects')
+			.chain()
+			.find({ name: name })
+			.assign({
+				name: project.name,
+				color: project.color,
+				description: project.description
+			})
+			.value();
+		
+		alert("Saved!");
+		
+		db.save();
 	};
 
 	this.create = function (project) {		
