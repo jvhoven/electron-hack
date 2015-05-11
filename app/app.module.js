@@ -4,5 +4,6 @@ var hack = angular.module('hack', [
 	'ui.router',
 	'hackControllers',
 	'hackServices',
-	'hackModels'
+	'hackModels',
+	'colorpicker.module'
 ]);

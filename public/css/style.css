@@ -444,3 +444,22 @@ html{
 .chevron:after{
 	border-top-color:#fff;/*Match background colour*/
 }
+
+/* color picker */
+.color-picker{
+	position: relative;
+}
+
+	.selected-color{
+	  width: 25px;
+	  background-color: #8a3d3d;
+	  height: 25px;
+	  border-radius: 4px;
+	  position: absolute;
+	  top: 6px;
+	  left: 8px;	
+	}
+	
+	.color-picker input{
+		padding-left: 45px !important;
+	}

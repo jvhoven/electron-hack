@@ -46,7 +46,8 @@ hack.config(['$stateProvider', '$urlRouterProvider',
 			controller: 'uploadController'
 		})
 		.state('project', {
-			url: '/project',
-			templateUrl: 'app/components/project/view.html'
-		});
+			url: '/project/{name}',
+			templateUrl: 'app/components/project/view.html',
+			controller: 'projectController'
+		})
 	}]);

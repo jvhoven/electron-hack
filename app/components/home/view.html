@@ -14,7 +14,7 @@
 					Actions
 				</li>
 				<li>
-					<a href="#" ng-click="toggleMenu($index, $event)">Edit</a>
+					<a href="#" ui-sref="project({ name: project.name })" ng-click="toggleMenu($index, $event)">Edit</a>
 				</li>
 				<li>
 					<a href="#" ng-click="delete(project.name); toggleMenu($index, $event); reload();">Delete</a>

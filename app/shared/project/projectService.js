@@ -33,15 +33,25 @@ hackServices.factory('ProjectService', function () {
 		return true;
 	};
 
-	this.read = function () {
-		// TODO	
+	this.read = function (name) {
+		var db = this.db();
+		
+		var project = db("projects").find({
+			name: name
+		});
+		
+		return project;
 	};
 
-	this.update = function () {
+	this.update = function (name, project) {
 		// TODO
-		var db = this.db();
-
-		db("projects")
+		this.db('projects')
+		  .chain()
+		  .find({ name: "Hack" })
+		  .assign({ title: 'test'})
+		  .value();
+				
+		alert("Updated!");
 	};
 
 	this.create = function (project) {		

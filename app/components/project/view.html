@@ -2,8 +2,8 @@
 	<div class="page-title">
 		<div class="wrapper-fluid">
 			<i class="fa fa-wrench"></i>
-			<h2>A project</h2>
-			<span>The most amazing project in the entire universe</span>
+			<h2>{{ project.name }}</h2>
+			<span>Management page</span>
 		</div>
 	</div>
 	<div class="wrapper-fluid">
@@ -15,19 +15,22 @@
 			<div class="content">
 				<div class="form-control">
 					<label for="name">Name</label>
-					<input type="text" value="Hack - The programming enthousiast manager" />
+					<input type="text" ng-model="project.name" />
 				</div>
 				<div class="form-control">
 					<label for="name">Background color</label>
-					<input type="text" value="#FC6E51" />
+					<div class="color-picker">
+						<div class="selected-color" style='background-color: {{ project.color }};'></div>
+						<input colorpicker type="text" name="picker" ng-model="project.color" />
+					</div>
 				</div>
 				<div class="form-control">
 					<label for="description">Description</label>
-					<textarea name="description"></textarea>
+					<textarea ng-model="project.description"></textarea>
 				</div>
 			</div>
 			<div class="buttons">
-				<input type="submit" class="btn btn-primary"></input>
+				<button class="btn btn-primary" ng-click="update(project)">Save</button>
 			</div>
 		</div>
 	</div>

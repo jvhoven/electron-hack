@@ -15,6 +15,7 @@ hackControllers.controller('homeController', ['$scope', '$state', '$timeout', 'P
             }, 40);
         };
         $scope.go = function (state) {
+            console.log(state);
             $state.go(state);
         };
   
