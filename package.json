@@ -7,7 +7,7 @@
     "lowdb": "^0.7.3"
   },
   "scripts": {
-    "postinstall": "cd node_modules && mkdir __base && cd __base && echo module.exports = require('path').resolve(__dirname + '/../../') + '/'; > index.js"
+    "postinstall": "cd node_modules && mkdir __base && cd __base && echo \"module.exports = require('path').resolve(__dirname + '/../../') + '/';\" > index.js"
   },
   "devDependencies": {
     "electron-prebuilt": "^0.25.2"
