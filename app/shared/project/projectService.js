@@ -44,7 +44,6 @@ hackServices.factory('ProjectService', function () {
 	};
 
 	this.update = function (name, project) {
-		// TODO
 		var db = this.db();
 		
 		db('projects')
@@ -63,7 +62,6 @@ hackServices.factory('ProjectService', function () {
 	};
 
 	this.create = function (project) {		
-		// Connect to db
 		var db = this.db();
 
 		db("projects").push({
