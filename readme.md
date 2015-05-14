@@ -10,7 +10,7 @@ Modules
 * [AngularUI-router](https://github.com/angular-ui/ui-router)
 * [electron](https://github.com/atom/electron)
 
-# References
+## References
 
 * [Quick start](https://github.com/atom/electron/blob/master/docs/tutorial/quick-start.md "Getting started with Electron")
 * [Official docs](https://github.com/atom/electron/tree/master/docs "Electron documentation")
