@@ -3,7 +3,7 @@ var hack = angular.module('hack');
 hack.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider
-			.otherwise("/");
+			.otherwise("/new"); 
 			
 		/**  # Modularization
 		 * I think we should modularize the routes. Check here: http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state#go
@@ -32,7 +32,7 @@ hack.config(['$stateProvider', '$urlRouterProvider',
 			 *  2. List (Would display: name, (github: number of stars and forks), short description, small icon)
 			 */
 		.state('home', {
-			url: '/',
+			url: '/home',
 			templateUrl: 'app/components/home/view.html',
 			controller: 'homeController'
 		})
@@ -45,9 +45,16 @@ hack.config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'app/shared/upload/view.html',
 			controller: 'uploadController'
 		})
+		
+		// To be projects/:name/edit
 		.state('project', {
 			url: '/project/{name}',
-			templateUrl: 'app/components/project/view.html',
+			templateUrl: 'app/components/project/edit.html',
 			controller: 'projectController'
 		})
+		.state('new', {
+			url: '/new',
+			templateUrl: 'app/components/project/add.html',
+			controller: 'projectController'
+		});
 	}]);

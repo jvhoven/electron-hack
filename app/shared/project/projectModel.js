@@ -50,7 +50,8 @@ hackModels.factory('Project', function(){
 	*  Linguist in the future.
 	*/
 	Project.prototype.setLanguages = function(url) {
-		return linguist.detect(url);
+		//return linguist.detect(url);
+		return "BrainFuck";
 	};
 	
 	/*

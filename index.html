@@ -14,6 +14,8 @@
 		<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.min.js"></script>
+		<script type="text/javascript" src="bower_components/lodash/dist/lodash.underscore.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-wizard/dist/angular-wizard.min.js"></script>
 		<script type="text/javascript" src="app/app.module.js"></script>
 		<script type="text/javascript" src="app/app.routes.js"></script>
 		<script type="text/javascript" src="app/components/home/homeController.js"></script>
@@ -21,6 +23,7 @@
 		<script type="text/javascript" src="app/shared/project/projectModel.js"></script>
 		<script type="text/javascript" src="app/shared/upload/uploadController.js"></script>
 		<script type="text/javascript" src="app/components/project/projectController.js"></script>
+		<script type="text/javascript" src="app/shared/upload/uploadDirective.js"></script>
 	</head>
 	<body>
 		<nav id="icons">
@@ -64,7 +67,7 @@
 						</a>
 						<ul>
 							<li ui-sref-active='active'>
-								<a class="sub-item" ui-sref="project">
+								<a class="sub-item" ui-sref="new">
 									<span>Add a project</span>
 								</a>
 							</li>

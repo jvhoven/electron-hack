@@ -257,7 +257,7 @@ html{
 		}
 	
 	/* projects */
-	#content section{
+	#content section:first-child{
 		float: left;
 		width: 100%;
 	}	

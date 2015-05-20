@@ -1,3 +1,113 @@
+/* wizard adding project */
+.steps-indicator{
+	float: left;
+	display: block;
+	width: 20%;
+	min-width: 150px;
+	min-height: 500px;
+	background-color: #FFF;
+}
+
+	.steps-indicator > li {
+		margin: 10px 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px dashed rgb(221, 221, 221);
+	}
+	
+		.steps-indicator > li a {
+			text-transform: lowercase;
+			font-size: 16px;
+			color: #555555;
+		}
+		
+		.steps-indicator li::before {
+			content: '\25CF';
+			color: #e3e3e3;
+			font-size: 25px;
+			margin-right: 15px;
+			
+			-webkit-transition: all .3s ease .15s;
+			-moz-transition: all .3s ease .15s;
+			-o-transition: all .3s ease .15s;
+			-ms-transition: all .3s ease .15s;
+			transition: all .3s ease .15s;
+		}
+		
+		.steps-indicator li.current::before{
+			content: '\25CF';
+			color: #76baf5;
+			font-size: 25px;
+		}
+		
+		.steps-indicator li.completed::before{
+			content: '\25CF';
+			color: #9cf391;
+			font-size: 25px;
+		}
+
+.steps{
+	float: right;
+	display: block;
+	width: 75%;
+	min-height: 500px;
+	background-color: #FFF;
+}
+
+	.steps section{
+		padding: 20px;
+	}
+	
+	.step-header{
+		text-align: center;
+		margin: 20px 0px;
+	}
+	
+		.step-header .step-title{
+			font-weight: 600;
+			font-family: Arial;
+			font-size: 30px;
+			color: #555;
+			line-height: 0;
+			margin-bottom: 20px;
+		}
+		
+		.step-header .step-subtitle{
+			color: #CACACA;
+			font-size: 18px;
+		}
+		
+	.step-content{
+		
+	}
+	
+		.step-content i{
+			margin-top: 50px;
+			color: #e3e3e3;
+  			font-size: 200px;
+		}
+		
+		.step-content .upload-title{
+			text-transform: uppercase;
+			color: #e3e3e3;
+			font-size: 20px;
+		}
+		
+		.step-content .step-directories > li{
+			float: left;
+			min-width: 50px;
+			padding: 15px 10px;
+			border-radius: 4px;
+			list-style: none;
+			margin-right: 15px;
+			background-color: #e3e3e3;
+			color: #4c4c4c;
+		}
+		
+		.step-content .step-directories > li.selected{
+			background-color: #8EDA84; 
+			color: #FFF;
+		}
+
 /* panel */
 .panel{ 
 	float: left;

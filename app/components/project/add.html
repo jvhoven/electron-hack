@@ -1,0 +1,42 @@
+<section>
+    <div class="page-title">
+		<div class="wrapper-fluid">
+			<i class="fa fa-upload"></i>
+			<h2>Add a new project</h2>
+			<span>Wizard for adding a new project</span>
+		</div>
+	</div>
+	<div class="wrapper-fluid">
+        <wizard on-finish="finishedWizard()"> 
+            <wz-step title="Choose a project">
+                <div class="step">
+                    <div class="step-header">
+                        <h1 class="step-title">Step one</h1>
+                        <h3 class="step-subtitle">Add your project to Hack</h3>
+                    </div>
+                    <div class="step-content" style="text-align: center;">
+                        <div dropzone id="step-upload">
+                            <i class="fa fa-cloud-upload"></i>
+                        </div>
+                        <h2 class="upload-title">Drop it like it's hot</h2>
+                    </div>
+                </div>
+            </wz-step>
+            <wz-step title="Ignore directories">
+                 <div class="step-header">
+                        <h1 class="step-title">Step two</h1>
+                        <h3 class="step-subtitle">Flag directories to ignore</h3>
+                    </div>
+                    <div class="step-content" style="text-align: center;">
+                        <ul class="step-directories">
+                            <li class="selected">.git</li>
+                            <li>node_modules</li>
+                            <li>bower_components</li>
+                        </ul>
+                    </div>
+            </wz-step>
+            <wz-step title="Add information">
+            </wz-step>
+        </wizard>
+    </div>
+</section>
